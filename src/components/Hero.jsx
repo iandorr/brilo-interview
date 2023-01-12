@@ -1,32 +1,22 @@
-import HeroStyled from './styled/Hero.styled'
-import Container from './Container'
+import {HeroStyled, HeroLeft, HeroRight, HeroTitle, HeroContainer} from './styled/Hero.styled'
+import Button from './Button'
+
+import heroImage from '/src/assets/img/hero-image.png'
 
 const Hero = () => {
   return (
     <HeroStyled>
-      <Container display='flex'>
-        <HeroLeft />
-        <HeroRight />
-      </Container>
+      <HeroContainer display='flex'>
+        <HeroLeft>
+          <HeroTitle>Jack Jackson</HeroTitle>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, dolore velit ex autem quae dicta laudantium hic dolor commodi alias asperiores illo, minus quis sapiente? Quasi nulla consectetur qui veniam omnis quaerat error odit quia praesentium dolores? Facere, perspiciatis praesentium.</p>
+          <Button btnText='Learn More' btnLink='#'/>
+        </HeroLeft>
+        <HeroRight>
+          <img src={heroImage} alt="" />
+        </HeroRight>
+      </HeroContainer>
     </HeroStyled>
-  )
-}
-
-const HeroLeft = () => {
-  return (
-    <div>
-      <h1>Jack Jackson</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi veniam doloribus commodi voluptates, cumque veritatis laudantium eius unde harum mollitia.</p>
-      {/* <Button></Button> */}
-    </div>
-  )
-}
-
-const HeroRight = () => {
-  return (
-    <div>
-      <img src="/src/assets/img/hero-image.png" alt="" />
-    </div>
   )
 }
 

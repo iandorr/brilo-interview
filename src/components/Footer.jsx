@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <FooterStyled>
       <Container>
-        Jack Jackson 2023
+        <small>&copy; Jack Jackson 2023</small>
       </Container>
     </FooterStyled>
   )

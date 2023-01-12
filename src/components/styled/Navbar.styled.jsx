@@ -1,10 +1,7 @@
 import styled, { useTheme } from "styled-components";
 
 const NavbarStyled = styled.nav`
-  display: flex;
-
   background-color: ${() => useTheme().colors.clAccent};
-  color: ${() => useTheme().colors.clText};
 
   ul {
     list-style-type: none;
@@ -12,7 +9,9 @@ const NavbarStyled = styled.nav`
 
     display: flex;
     justify-content: flex-end;
+
     gap: .5rem;
+    padding: 1rem 0;
   }
 
   li {
@@ -22,11 +21,12 @@ const NavbarStyled = styled.nav`
     text-transform: uppercase;
     letter-spacing: .05rem;
 
-    opacity: .7;
+    opacity: .8;
 
-    transition: opacity .3s ease-out;
+    transition: opacity .3s ease-out, color .3s ease-out;
 
-    font-weight: 100;
+    font-weight: ${() => useTheme().fntWeight.thin};
+    color: ${() => useTheme().colors.clTextLight};
 
     &::after {
       position: absolute;

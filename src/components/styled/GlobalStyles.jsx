@@ -2,6 +2,16 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 
+  * {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  :root {
+    position: relative;
+  }
+
   /* CSS Reset */
 
   /* Box sizing rules */
@@ -11,7 +21,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  /* Remove default margin */
+  /* Remove default margin and padding */
   body,
   h1,
   h2,
@@ -21,8 +31,10 @@ const GlobalStyles = createGlobalStyle`
   figure,
   blockquote,
   dl,
-  dd {
+  dd,
+  ul {
     margin: 0;
+    padding: 0;
   }
 
   /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -48,6 +60,11 @@ const GlobalStyles = createGlobalStyle`
     text-decoration-skip-ink: auto;
   }
 
+  /* Remove underlines on links */
+  a {
+    text-decoration: none;
+  }
+
   /* Make images easier to work with */
   img,
   picture {
@@ -61,6 +78,14 @@ const GlobalStyles = createGlobalStyle`
   textarea,
   select {
     font: inherit;
+  }
+
+  /* Remove default styling for buttons */
+  button {
+    border: none;
+    outline: none;
+
+    cursor: pointer;
   }
 
   /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -80,13 +105,6 @@ const GlobalStyles = createGlobalStyle`
   }
 
   // CSS Reset - end
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500&display=swap');
-
-  * {
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-  }
 `
 
 export default GlobalStyles
