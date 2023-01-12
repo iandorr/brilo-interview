@@ -16,23 +16,48 @@ const HeroContainer = styled.div`
   margin: 0 auto;
   padding-inline: 1rem;
 
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
   @media(min-width: ${() => useTheme().breakpoints.mobile}) {
     padding-inline: 2rem;
+    flex-direction: row;
+    gap: 0;
   }
   
-  display: flex;
+  
   justify-content: space-between;
+  align-items: center;
 `
 
 const HeroLeft = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  align-items: center;
+  
+  gap: 1rem;
 
-  padding-right: 10rem;
+  & p {
+    text-align: center;
+  }
+
+  @media(min-width: ${() => useTheme().breakpoints.mobile}) {
+    max-width: 60%;
+    padding-right: 2rem;
+    align-items: flex-start;
+
+    & p {
+      text-align: left;
+    }
+  }
+
+  @media(min-width: ${() => useTheme().breakpoints.tablet}) {
+    gap: 3rem;
+    padding-right: 8rem;
+  }
+
   margin: auto 0;
-
-  max-width: 60%;
 
   & a {
     width: fit-content;
@@ -43,6 +68,11 @@ const HeroTitle = styled.h1`
   font-size: ${() => useTheme().fontSize.header };
   font-weight: ${() => useTheme().fntWeight.thinest };
   text-transform: uppercase;
+  text-align: center;
+
+  @media(min-width: ${() => useTheme().breakpoints.mobile}) {
+    text-align: left;
+  }
 `
 
 const HeroRight = styled.div`
