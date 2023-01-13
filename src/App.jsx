@@ -26,7 +26,7 @@ function App() {
       <Hero id='home'/>
       <Cards id='my-work'/>
       <Footer />
-      <ThemeChanger setCurrentTheme={setCurrentTheme}/>
+      <ThemeChanger setCurrentTheme={setCurrentTheme} currentTheme={currentTheme}/>
     </ThemeProvider>
   )
 }

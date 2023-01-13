@@ -8,6 +8,9 @@ const darkTheme = {
 
     clBtnBg: '#3697a7',
     clBtnBgAccent: '#1f464d',
+
+    clIconBg: '#333333',
+    clIconPrimary: '#ebf4f0',
   },
   fontSize: {
     default: "18px",
@@ -38,6 +41,9 @@ const lightTheme = {
 
     clBtnBg: '#3697a7',
     clBtnBgAccent: '#1f464d',
+
+    clIconBg: '#fff',
+    clIconPrimary: '#3697a7',
   },
   fontSize: {
     default: "18px",

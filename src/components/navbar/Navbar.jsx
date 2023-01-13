@@ -7,15 +7,16 @@ import {
 import NavLink from './NavLink'
 import links from '/src/assets/data/links'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const Navbar = () => {
-  const [mobNavVis, setMobNavVis] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+  
 
   return (
     <NavbarStyled>
-      <NavbarContainer isOpen={mobNavVis}>
-        <NavLinkContainer isOpen={mobNavVis}>
+      <NavbarContainer isOpen={isMobile}>
+        <NavLinkContainer isOpen={isMobile}>
           {
             links.map( (link) => {
               return (
@@ -23,10 +24,10 @@ const Navbar = () => {
                   key={link.id}
                   title={link.title}
                   href={`#${link.id}`}
-                  isOpen={mobNavVis}
+                  isOpen={isMobile}
                   onClick={ () => {
-                    setMobNavVis( (currentValue) => !currentValue)
-                    console.log(mobNavVis)
+                    setIsMobile( (currentValue) => !currentValue)
+                    console.log(isMobile)
                   }}
                 />
               )
@@ -35,11 +36,11 @@ const Navbar = () => {
         </NavLinkContainer>
         <MobileNavButton
           onClick={ () => {
-            setMobNavVis( (currentValue) => !currentValue)
-            console.log(mobNavVis)
+            setIsMobile( (currentValue) => !currentValue)
+            console.log(isMobile)
           }}
         >
-          {mobNavVis ? <>&#10005;</> : <>&#8801;</>} 
+          {isMobile ? <>&#10005;</> : <>&#8801;</>} 
         </MobileNavButton>
       </NavbarContainer>
     </NavbarStyled>

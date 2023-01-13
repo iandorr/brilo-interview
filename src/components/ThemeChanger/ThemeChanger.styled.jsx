@@ -6,30 +6,23 @@ const ThemeChangerStyled = styled.div`
   bottom: 1rem;
 
   & button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     outline: none;
-    border: 1px solid ${() => useTheme().colors.clText };
+    padding: .5rem;
+    border-radius: 100%;
 
     font-size: 14px;
-    padding: .2rem 1rem;
 
-    opacity: .8;
-    transition: .5s ease-out;
+    border: 1px solid ${() => useTheme().colors.clIconPrimary };
+    color: ${() => useTheme().colors.clIconPrimary };
+    background-color: ${() => useTheme().colors.clIconBg };
 
-    &:hover {
-      opacity: 1;
+    &:focus {
+      outline: none;
     }
-
-    color: ${() => useTheme().colors.clAccent };
-    background-color: ${() => useTheme().colors.clText };
-  }
-
-  & button:first-child {
-    border-radius: 15px 0 0 15px;
-    margin-right: .05rem;
-  }
-
-  & button:nth-child(2) {
-    border-radius: 0 15px 15px 0;
   }
 `
 
