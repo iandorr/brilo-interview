@@ -4,7 +4,7 @@ const HeroStyled = styled.div`
   background-color: ${() => useTheme().colors.clBg};
   color: ${() => useTheme().colors.clText };
 
-  padding-top: 2rem;
+  padding-top: 8rem;
 
   @media(min-width: ${() => useTheme().breakpoints.tablet}) {
     padding-top: 10rem;
@@ -36,7 +36,8 @@ const HeroLeft = styled.div`
   flex-direction: column;
   align-items: center;
   
-  gap: 1rem;
+  gap: 3rem;
+  padding-bottom: 2rem;
 
   & p {
     text-align: center;
@@ -65,12 +66,13 @@ const HeroLeft = styled.div`
 `
 
 const HeroTitle = styled.h1`
-  font-size: ${() => useTheme().fontSize.header };
+  font-size: ${() => useTheme().fontSize.large };
   font-weight: ${() => useTheme().fntWeight.thinest };
   text-transform: uppercase;
   text-align: center;
 
   @media(min-width: ${() => useTheme().breakpoints.mobile}) {
+    font-size: ${() => useTheme().fontSize.header };
     text-align: left;
   }
 `

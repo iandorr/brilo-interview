@@ -1,4 +1,4 @@
-import styled, { useTheme } from "styled-components";
+import styled, { useTheme, css } from "styled-components";
 
 const NavLinkStyled = styled.li`
   position: relative;
@@ -9,10 +9,23 @@ const NavLinkStyled = styled.li`
 
   opacity: .8;
 
-  transition: opacity .3s ease-out, color .3s ease-out;
+  transition: opacity .3s ease-out;
 
   font-weight: ${() => useTheme().fntWeight.thin};
-  color: ${() => useTheme().colors.clTextLight};
+  
+  /* @media(max-width: ${() => useTheme().breakpoints.mobile}) {
+    transition: opacity;
+    transition-delay: 1000ms;
+
+    ${ ({ isOpen }) => !isOpen && css`
+      opacity: 0;
+      transition: all .1s;
+    `}
+
+    ${ ({ isOpen }) => isOpen && css`
+      opacity: 1;
+    `}
+  } */
 
   &::after {
     position: absolute;
@@ -33,13 +46,22 @@ const NavLinkStyled = styled.li`
   }
 
   &:hover {
-    color: ${() => useTheme().colors.clText};
+    /* color: ${() => useTheme().colors.clText}; */
     cursor: pointer;
     opacity: 1;
 
     &::after {
       width: 80%;
       opacity: 1;
+    }
+  }
+
+  & a {
+    color: ${() => useTheme().colors.clTextLight};
+    transition: color .3s ease-out;
+
+    &:hover {
+      color: ${() => useTheme().colors.clText};
     }
   }
 `

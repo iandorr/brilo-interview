@@ -23,8 +23,8 @@ function App() {
     <ThemeProvider theme={currentTheme}>
       <GlobalStyles />
       <Navbar />
-      <Hero />
-      <Cards />
+      <Hero id='home'/>
+      <Cards id='my-work'/>
       <Footer />
       <ThemeChanger setCurrentTheme={setCurrentTheme}/>
     </ThemeProvider>

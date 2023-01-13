@@ -3,9 +3,9 @@ import Button from '../button/Button'
 
 import heroImage from '/src/assets/img/hero-image.png'
 
-const Hero = () => {
+const Hero = ({ id }) => {
   return (
-    <HeroStyled>
+    <HeroStyled id={id}>
       <HeroContainer>
         <HeroLeft>
           <HeroTitle>Jack Jackson</HeroTitle>

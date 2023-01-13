@@ -5,9 +5,9 @@ import card1 from '/src/assets/img/card-project.png'
 import card2 from '/src/assets/img/card-rebrand.png'
 import card3 from '/src/assets/img/card-work.png'
 
-const Cards = () => {
+const Cards = ( {id} ) => {
   return (
-    <CardsStyled>
+    <CardsStyled id={id} >
       <CardsSectionContainer>
         <h2>What I did</h2>
         <CardsContainer>

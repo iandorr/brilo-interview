@@ -15,12 +15,10 @@ const ButtonStyled = styled.button`
 
   cursor: pointer;
 
-  transform: scale3d(1, 1, 1);
   transition: .3s ease-out;
 
   &:hover {
     background-color: ${() => useTheme().colors.clBtnBgAccent };
-    transform: scale3d(1.02, 1.02, 1);
   }
 `
 

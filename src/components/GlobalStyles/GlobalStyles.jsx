@@ -9,7 +9,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   :root {
-    position: relative;
+    /* position: relative; */
+    scroll-behavior: smooth;
   }
 
   /* CSS Reset */
@@ -82,6 +83,7 @@ const GlobalStyles = createGlobalStyle`
 
   /* Remove default styling for buttons */
   button {
+    z-index: 10;
     border: none;
     outline: none;
 
