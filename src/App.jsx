@@ -1,6 +1,6 @@
 // Themes
 import { ThemeProvider } from 'styled-components'
-import { darkTheme } from './themes/themes'
+import { darkTheme } from './components/themes/themes'
 
 // Styles
 import GlobalStyles from './components/GlobalStyles/GlobalStyles'

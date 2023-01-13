@@ -1,14 +1,20 @@
 import { NavbarStyled, NavbarContainer, NavLinkContainer} from './Navbar.styled'
 import NavLink from './NavLink'
+import links from '/src/assets/data/links'
 
 const Navbar = () => {
+
   return (
-    <NavbarStyled className='NavbarStyled'>
-      <NavbarContainer className='NavbarContainer'>
-        <NavLinkContainer className='NavLinkContainer'>
-          <NavLink className='NavLinkStyled' title='Home'/>
-          <NavLink className='NavLinkStyled' title='About me'/>
-          <NavLink className='NavLinkStyled' title='My work'/>
+    <NavbarStyled>
+      <NavbarContainer>
+        <NavLinkContainer>
+          {
+            links.map( (link) => {
+              return (
+                <NavLink key={link.id} title={link.title} href={`#${link.id}`} />
+              )
+            })
+          }
         </NavLinkContainer>
       </NavbarContainer>
     </NavbarStyled>

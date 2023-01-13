@@ -1,9 +1,9 @@
 import NavLinkStyled from './NavLinkStyled'
 
-const NavLink = ({ title }) => {
+const NavLink = ({ title, href }) => {
   return (
     <NavLinkStyled>
-      {title}
+      <a href={href}>{title}</a>
     </NavLinkStyled>
   )
 }
