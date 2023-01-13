@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components'
 import { darkTheme } from './themes/themes'
 
 // Styles
-import GlobalStyles from './components/styled/GlobalStyles'
+import GlobalStyles from './components/GlobalStyles/GlobalStyles'
 
 // Components
 import Navbar from './components/navbar/Navbar'

@@ -1,4 +1,4 @@
-import { ThemeChangerStyled } from '../styled/ThemeChanger.styled.jsx'
+import { ThemeChangerStyled } from './ThemeChanger.styled.jsx'
 import { darkTheme, lightTheme } from '/src/themes/themes'
 
 const ThemeChanger = ({ setCurrentTheme }) => {
