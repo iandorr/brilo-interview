@@ -1,5 +1,5 @@
 // import CardsContainer from './Container'
-import { CardsStyled, CardsSectionContainer, CardsContainer } from './styled/Cards.styled'
+import { CardsStyled, CardsSectionContainer, CardsContainer } from './Cards.styled'
 import Card from './Card'
 import card1 from '/src/assets/img/card-project.png'
 import card2 from '/src/assets/img/card-rebrand.png'

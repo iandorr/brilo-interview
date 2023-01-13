@@ -4,10 +4,6 @@ const FooterStyled = styled.div`
   background-color: ${() => useTheme().colors.clBg};
   color: ${() => useTheme().colors.clText };
 
-  & small {
-    font-size: ${() => useTheme().fontSize.small };
-  }
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,4 +16,18 @@ const FooterStyled = styled.div`
   }
 `
 
-export default FooterStyled
+const FooterContainer = styled.div`
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-inline: 1rem;
+
+  @media(min-width: ${() => useTheme().breakpoints.mobile}) {
+    padding-inline: 2rem;
+  }
+
+  & small {
+    font-size: ${() => useTheme().fontSize.small };
+  }
+`
+
+export { FooterStyled, FooterContainer }

@@ -1,12 +1,11 @@
-import FooterStyled from './styled/Footer.styled'
-import Container from './Container';
+import { FooterStyled, FooterContainer } from './Footer.styled'
 
 const Footer = () => {
   return (
     <FooterStyled>
-      <Container>
+      <FooterContainer>
         <small>&copy; Jack Jackson 2023</small>
-      </Container>
+      </FooterContainer>
     </FooterStyled>
   )
 }

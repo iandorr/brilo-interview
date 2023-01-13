@@ -1,4 +1,4 @@
-import CardStyled from './styled/Card.styled'
+import CardStyled from './Card.styled'
 
 const Card = ({title, subtitle, img}) => {
   return (

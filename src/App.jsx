@@ -6,11 +6,11 @@ import { darkTheme } from './themes/themes'
 import GlobalStyles from './components/styled/GlobalStyles'
 
 // Components
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Cards from './components/Cards'
-import Footer from './components/Footer'
-import ThemeChanger from './components/ThemeChanger'
+import Navbar from './components/navbar/Navbar'
+import Hero from './components/hero/Hero'
+import Cards from './components/cards/Cards'
+import Footer from './components/footer/Footer'
+import ThemeChanger from './components/ThemeChanger/ThemeChanger'
 
 // React
 import { useState } from 'react'

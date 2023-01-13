@@ -1,4 +1,4 @@
-import ButtonStyled from "./styled/Button.styled"
+import ButtonStyled from "./Button.styled"
 
 const Button = ({btnText, btnLink}) => {
   return (
