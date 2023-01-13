@@ -43,6 +43,14 @@ const HeroLeft = styled.div`
     text-align: center;
   }
 
+  & img {
+    display: block;
+    width: 5rem;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    object-position: right top;
+  }
+
   @media(min-width: ${() => useTheme().breakpoints.mobile}) {
     max-width: 60%;
     padding-right: 2rem;
@@ -50,6 +58,10 @@ const HeroLeft = styled.div`
 
     & p {
       text-align: left;
+    }
+
+    & img {
+      display: none;
     }
   }
 
@@ -78,6 +90,11 @@ const HeroTitle = styled.h1`
 `
 
 const HeroRight = styled.div`
+
+  @media(max-width: ${() => useTheme().breakpoints.mobile}) {
+    display: none;
+  }
+
   img {
     max-height: 500px;
   }

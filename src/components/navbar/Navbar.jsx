@@ -11,10 +11,30 @@ import { useState, useEffect } from 'react'
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false)
-  
+  const [lastScroll, setLastScroll] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+
+  const handleScroll = () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll && visible) {
+      setVisible(false);
+    } else if (currentScroll <= lastScroll) {
+
+      setVisible(true);
+    }
+    setLastScroll(currentScroll);
+  };
+
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
 
   return (
-    <NavbarStyled>
+    <NavbarStyled isVisible={visible}>
       <NavbarContainer isOpen={isMobile}>
         <NavLinkContainer isOpen={isMobile}>
           {
@@ -27,7 +47,6 @@ const Navbar = () => {
                   isOpen={isMobile}
                   onClick={ () => {
                     setIsMobile( (currentValue) => !currentValue)
-                    console.log(isMobile)
                   }}
                 />
               )
@@ -37,7 +56,6 @@ const Navbar = () => {
         <MobileNavButton
           onClick={ () => {
             setIsMobile( (currentValue) => !currentValue)
-            console.log(isMobile)
           }}
         >
           {isMobile ? <>&#10005;</> : <>&#8801;</>} 

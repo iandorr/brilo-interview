@@ -8,14 +8,14 @@ const NavbarStyled = styled.nav`
   right: 0;
   left: 0;
 
-  /* ${props => props.isVisible === false && css`
+  ${props => props.isVisible === false && css`
     transform: translateY(-100%);
     transition: transform 0.3s ease-out;
   `}
   ${props => props.isVisible === true && css`
     transform: translateY(0);
     transition: transform 0.3s ease-in;
-  `} */
+  `}
 `
 
 const NavbarContainer = styled.div`
